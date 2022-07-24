@@ -54,7 +54,7 @@ const TemperatureAndDetails = ({weather: {
                     </Description>
                 </ForecastText>
             </Data>
-            <p style={{fontWeight: '200'}}>|</p>
+
             <Data>
                 <UilSunset/>
                 <ForecastText>
@@ -63,7 +63,7 @@ const TemperatureAndDetails = ({weather: {
                     </Description>
                 </ForecastText>
             </Data>
-            <p style={{fontWeight: '200'}}>|</p>
+
             <Data>
                 <UilTemperaturePlus/>
                 <ForecastText>
@@ -72,7 +72,7 @@ const TemperatureAndDetails = ({weather: {
                     </Description>
                 </ForecastText>
             </Data>
-            <p style={{fontWeight: '200'}}>|</p>
+
             <Data>
                 <UilTemperatureMinus/>
                 <ForecastText>

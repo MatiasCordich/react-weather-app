@@ -1,37 +1,50 @@
 import React from 'react'
-import { ButtonsBox, ButtonCity } from './TopsButtonsElements'
+import { ButtonsBox, ButtonCity, ButtonHamburguer } from './TopsButtonsElements'
+import MenuButton from '../MenuButton/MenuButton'
+import { useState } from 'react'
 
-const TopButtons = ({setQuery}) => {
+const TopButtons = ({ setQuery }) => {
 
     const cities = [
         {
             id: 1,
-            title: 'Buenos Aires'  
+            title: 'Buenos Aires'
         },
         {
             id: 2,
-            title: 'Londres'  
+            title: 'Londres'
         },
         {
             id: 3,
-            title: 'Tokyo'  
+            title: 'Tokyo'
         },
         {
             id: 4,
-            title: 'Madrid'  
+            title: 'Madrid'
         },
         {
             id: 5,
-            title: 'Lima'  
+            title: 'Lima'
         },
     ]
-  return (
-    <ButtonsBox>
-        {cities.map((city) => (
-                <ButtonCity onClick={()=> setQuery({q:city.title})} key={city.id}>{city.title}</ButtonCity>  
-        ))}
-    </ButtonsBox>
-  )
+
+    const [open, setOpen] = useState(false)
+
+    const handleClick = () => {
+      setOpen(!open)
+    }
+
+    return (
+
+        <ButtonsBox>
+            <MenuButton open={open} handleClick={handleClick}/>
+            {cities.map((city) => (
+                <ButtonCity open={open} onClick={() => setQuery({ q: city.title })} key={city.id}>{city.title}</ButtonCity>
+            ))}
+
+
+        </ButtonsBox>
+    )
 }
 
 export default TopButtons

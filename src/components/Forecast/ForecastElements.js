@@ -5,12 +5,22 @@ import { DataBox, Data, Img } from '../TemperatureAndDetails/TemperatureDetailsE
 export const ForecastBox = styled(InputBox)`
     display: flex;
     flex-direction: column;
-    margin: 2rem auto;
-    width: 90%;
+    margin: 5rem auto;
+    width: 95%;
+
+    @media screen and (min-width: 990px) {
+        margin: 2rem auto;
+    }
+
 `
 export const ForecastTitle = styled.h3`
+    text-align: center;
     font-weight: 500;
     text-transform:Uppercase; 
+
+    @media screen and (min-width: 660px) {
+       text-align:left;
+    }
 `
 
 export const Line = styled.hr`
@@ -18,8 +28,15 @@ export const Line = styled.hr`
     margin: .5rem auto;
 `
 export const ForecastData = styled(DataBox)`
-    margin-top: 2rem;
-    justify-content: space-around;
+    padding: 5rem;
+
+    @media screen and (min-width: 660px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: 2rem;
+        gap: 5rem;
+    }
+
 
 `
 export const ForecastCard = styled(Data)`

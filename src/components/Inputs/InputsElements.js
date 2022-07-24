@@ -2,19 +2,30 @@ import styled from 'styled-components'
 
 export const InputBox = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 2rem;
-    margin: 0 auto;
-    width: 70%;
+    gap: 2rem;
+
+    @media screen and (min-width: 990px) {
+        flex-direction: row;
+        padding: 2rem;
+        margin: 0 auto;
+        width: 70%;
+    }
+
 `
 
 export const Fieldset = styled.fieldset`
+
     border: none;
     display: flex;
     justify-content: center;
     align-items:center;
     gap: 2rem;
-    width: 50%;
+
+    @media screen and (min-width: 990px) {
+        width: 50%;
+    }
 
 `
 
@@ -29,8 +40,10 @@ export const TemperatureBox = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    width: 25%;
-
+    
+    @media screen and (min-width: 990px) {
+        width: 25%;
+    }
 `
 
 export const TemperatureButton = styled.button`

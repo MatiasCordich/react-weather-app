@@ -3,7 +3,7 @@ import { InputBox } from '../Inputs/InputsElements'
 
 export const DetailsBox = styled(InputBox)`
     flex-direction: column;
-    gap: 4rem;
+    gap: 6rem;
     width: 100%;
 `
 
@@ -13,14 +13,41 @@ export const DetailText = styled.p`
 `
 
 export const TemperatureBox = styled(InputBox)`
-    justify-content: space-around;
-    align-items: center;
-    width: 90%;  
+    flex-direction: column;
+    justify-content: center;
+    
+    @media screen and (min-width: 660px) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 990px) {
+        width: 70%;
+    }
+
 `
 
-export const Img = styled.img``
+export const Img = styled.img`
+    margin: 0 auto;
+    max-width: 20rem;
+
+    @media screen and (min-width: 660px) {
+        margin: 0;
+    }
+
+
+`
 export const TemperatureText = styled.p`
+    text-align: center;
     font-size: 5rem;
+
+    @media screen and (min-width: 990px) {
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+    }
 `
 export const OthersDetails = styled.div`
     display: flex;
@@ -44,9 +71,15 @@ export const UpAndDown = styled(InputBox)`
 
 export const DataBox = styled.ul`
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     gap: 1.5rem;
+
+    @media screen and (min-width: 660px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
 `
 export const Data = styled.li`
     display: flex;
@@ -56,6 +89,7 @@ export const Data = styled.li`
 `
 
 export const ForecastText = styled(TemperatureText)`
+    flex-direction: column;
     font-size: 1.8rem;
     font-weight: 300;
 `
