@@ -41,8 +41,6 @@ const Inputs = ({ setQuery, units, setUnits }) => {
     }
   }
 
-  
-
   return (
     <InputBox>
       <Fieldset>
@@ -53,11 +51,11 @@ const Inputs = ({ setQuery, units, setUnits }) => {
           placeholder="Search..."
         />
         <UilSearch 
-        style={{ cursor: "pointer" }}
+        style={{ cursor: "pointer", color: "#03C988" }}
         onClick={handleSearchClick}
         />
         <UilLocationPoint 
-        style={{ cursor: "pointer" }} 
+        style={{ cursor: "pointer", color: "#03C988" }}
         onClick={handleLocationClick}
         />
       </Fieldset>

@@ -1,6 +1,16 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
+:root{
+
+/* COLORES */
+  --black-s: #222222;
+  --black-l: #191717;
+  --black-m: #454545;
+  --green: #03C988;
+  --white: #fafafa;
+}
 
 *{
     margin: 0;
@@ -20,6 +30,7 @@ html{
 
 body{
     font-size:1.8rem;
+    background-color: var(--black-l);
     color: #fafafa;
 }
 
@@ -31,4 +42,8 @@ ul{
 a{
     text-decoration: none;
 }
-`
+
+::-webkit-scrollbar{
+    display: none;
+}
+`;
