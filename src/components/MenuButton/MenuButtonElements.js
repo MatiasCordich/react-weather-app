@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const MenuButtonBox = styled.button`
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -11,7 +10,8 @@ export const MenuButtonBox = styled.button`
     color: #fafafa;
     width: 100%;
     padding: 2rem;
-    @media screen and (min-width: 660px){
+    
+    @media (min-width: 768px) {
         display: none;
     }
 `

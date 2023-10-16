@@ -23,17 +23,15 @@ const TemperatureAndDetails = ({ weather: {
 ) => {
   return (
     <DetailsBox>
-      
       <TemperatureBox>
         <TempBoxFirst>
-        <Img src={iconUrlFromCode(icon)} alt="sunimg" />
-        <TemperatureText>
-          {`${temp.toFixed()}°`}
-          <DetailText>{details}</DetailText>
-        </TemperatureText>
-        
+          <Img src={iconUrlFromCode(icon)} alt="sunimg" />
+          <TemperatureText>
+            {`${temp.toFixed()}°`}
+            <DetailText>{details}</DetailText>
+          </TemperatureText>
         </TempBoxFirst>
-      
+
         <OthersDetails>
           <Details>
             <UilTemperatureThreeQuarter />

@@ -14,11 +14,13 @@ import {
 const Forecast = ({ title, items }) => {
   return (
     <ForecastBox>
-      <ForecastTitle>{title}</ForecastTitle>
-      <Line />
+      <ForecastTitle>
+        {title}
+        <Line />
+      </ForecastTitle>
       <ForecastData>
-        {items.map((item) => (
-          <ForecastCard>
+        {items.map((item, index) => (
+          <ForecastCard key={index}>
             <ForecastHour>{item.title}</ForecastHour>
             <ForecastImg
               src={iconUrlFromCode(item.icon)}

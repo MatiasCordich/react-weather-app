@@ -18,21 +18,33 @@ export const WeatherContent = styled.div`
   background-color: var(--black-s);
   border: 1px solid var(--black-m);
   border-radius: 0.6rem;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   gap: 1rem;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    align-items: stretch;
+  }
 `;
 
 export const WheaterDetails = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 80%;
+  width: 100%;
 `;
 
-export const WheaterForecastBox = styled.aside`
+export const FBox = styled.aside`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  width: 80%;
+  gap: 2rem;
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+  }
 `;

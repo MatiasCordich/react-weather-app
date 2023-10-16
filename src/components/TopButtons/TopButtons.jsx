@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonsBox, ButtonCity, ButtonHamburguer } from './TopsButtonsElements'
+import { ButtonsBox, ButtonCity} from './TopsButtonsElements'
 import MenuButton from '../MenuButton/MenuButton'
 import { useState } from 'react'
 
@@ -41,8 +41,6 @@ const TopButtons = ({ setQuery }) => {
             {cities.map((city) => (
                 <ButtonCity open={open} onClick={() => setQuery({ q: city.title })} key={city.id}>{city.title}</ButtonCity>
             ))}
-
-
         </ButtonsBox>
     )
 }

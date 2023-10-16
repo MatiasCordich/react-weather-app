@@ -43,6 +43,14 @@ a{
     text-decoration: none;
 }
 
+fieldset{
+    border: none;
+}
+
+input{
+    outline: none;
+}
+
 ::-webkit-scrollbar{
     display: none;
 }

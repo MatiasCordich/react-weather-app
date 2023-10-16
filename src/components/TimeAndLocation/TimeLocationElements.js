@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { InputBox } from "../Inputs/InputsElements";
 
 export const TimeAndLocationBox = styled.div`
   background-color: var(--black-s);
@@ -7,12 +6,13 @@ export const TimeAndLocationBox = styled.div`
   border: 1px solid var(--black-m);
   padding: 1.5rem;
   border-radius: 0.6rem;
-  width: 100%;
-
-  @media screen and (min-width: 990px) {
-    margin: auto;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 900px) {
+      align-items: flex-start;
   }
+
 `;
 
 export const TimeText = styled.p`
@@ -20,6 +20,11 @@ export const TimeText = styled.p`
   font-weight: 300;
   text-align: left;
   color: var(--green);
+  text-align: center;
+
+  @media (min-width: 900px) {
+      text-align: left;
+  }
 `;
 
 export const LocationText = styled(TimeText)`

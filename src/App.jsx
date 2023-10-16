@@ -5,10 +5,10 @@ import TimeAndLocation from "./components/TimeAndLocation/TimeAndLocation";
 import TopButtons from "./components/TopButtons/TopButtons";
 import Footer from "./components/Footer/Footer";
 import {
+  FBox,
   WeatherBox,
   WeatherContent,
   WheaterDetails,
-  WheaterForecastBox,
   Wrapper,
 } from "./WrapperElement";
 import getFormattedData from "./server/weatherCall";
@@ -23,28 +23,10 @@ function App() {
     const fetchWeather = async () => {
       await getFormattedData({ ...query, units }).then((data) => {
         setWeather(data);
-        console.log(data);
       });
     };
-
     fetchWeather();
   }, [query, units]);
-
-  const formatBackground = () => {
-    const styleBlue =
-      "linear-gradient(0deg, rgba(0,57,161,1) 23%, rgba(3,50,106,1) 100%)";
-
-    const styleOrange =
-      "linear-gradient(0deg, rgba(164,64,1,1) 20%, rgba(255,122,50,1) 100%)";
-
-    if (!weather) return styleBlue;
-
-    const threshold = units === "metric" ? 20 : 60;
-
-    if (weather.temp >= threshold) return styleOrange;
-
-    return styleBlue;
-  };
 
   return (
     <>
@@ -59,11 +41,11 @@ function App() {
                   <TimeAndLocation weather={weather} />
                   <TemperatureAndDetails weather={weather} />
                 </WheaterDetails>
-
-                <Forecast title="hourly forecast" items={weather.hourly} />
+                <FBox>
+                  <Forecast title="hourly" items={weather.hourly} />
+                  <Forecast title="daily" items={weather.daily} />
+                </FBox>
               </WeatherContent>
-
-              <Forecast title="daily forecast" items={weather.daily} />
             </>
           )}
         </WeatherBox>

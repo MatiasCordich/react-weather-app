@@ -7,7 +7,8 @@ export const ButtonsBox = styled.div`
     background-color: var(--black-s);
     border: 1px solid var(--black-m);
     border-radius: 0.6rem;
-    @media (min-width: 660px) {
+
+    @media (min-width: 768px) {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
@@ -26,7 +27,7 @@ export const ButtonCity = styled.button`
     display: ${props => (props.open ? "none" : "block")};
     cursor: pointer;
 
-    @media screen and (min-width: 660px) {
+    @media screen and (min-width: 768px) {
         display: block;
     }
 `
