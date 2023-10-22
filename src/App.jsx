@@ -13,6 +13,7 @@ import {
 } from "./WrapperElement";
 import getFormattedData from "./server/weatherCall";
 import { useEffect, useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [query, setQuery] = useState({ q: "berlin" });
@@ -32,6 +33,7 @@ function App() {
     <>
       <Wrapper>
         <WeatherBox>
+          <Navbar/>
           <TopButtons setQuery={setQuery} />
           <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
           {weather && (
