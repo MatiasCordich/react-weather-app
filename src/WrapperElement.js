@@ -15,8 +15,8 @@ export const WeatherBox = styled.div`
 `;
 
 export const WeatherContent = styled.div`
-  background-color: var(--black-s);
-  border: 1px solid var(--black-m);
+   background-color: ${({ theme }) => theme.colors.background};
+    border: ${({ theme }) => theme.colors.border};
   border-radius: 0.6rem;
   padding: 1.5rem;
   display: flex;

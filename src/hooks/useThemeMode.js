@@ -1,17 +1,25 @@
-import { useState } from "react"
+import { useState, useEffect } from "react";
 
+export const useThemeMode = () => {
+  const [theme, setTheme] = useState("default");
 
-const useThemeMode = () => {
-  const [theme, setTheme] = useState('default')
 
   const toggleTheme = () => {
-    if (theme === 'default') {
-        setTheme('dark')
-        return
+    if (theme === "default") {
+      window.localStorage.setItem("theme", "dark");
+      setTheme("dark");
+      return;
     }
 
-    setTheme('default')
-  }
+    window.localStorage.setItem("theme", "default");
+    setTheme("default");
+  };
 
-  return [theme, toggleTheme]
-}
+  const savedTheme = window.localStorage.getItem("theme")
+
+  useEffect(() => {
+    savedTheme && setTheme(savedTheme)
+  }, [])
+
+  return [theme, toggleTheme];
+};

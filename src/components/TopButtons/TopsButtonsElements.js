@@ -4,8 +4,8 @@ export const ButtonsBox = styled.div`
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    background-color: var(--black-s);
-    border: 1px solid var(--black-m);
+    background-color: ${({ theme }) => theme.colors.backgroundBox};
+    border: ${({ theme }) => theme.colors.border};
     border-radius: 0.6rem;
 
     @media (min-width: 768px) {
@@ -20,7 +20,7 @@ export const ButtonCity = styled.button`
     border: none;
     color: var(--green);
     font-size: 1.9rem;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .3rem;
     padding: 2rem;

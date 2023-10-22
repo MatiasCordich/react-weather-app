@@ -14,11 +14,17 @@ import {
 import getFormattedData from "./server/weatherCall";
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
+import { ThemeProvider } from "styled-components";
+import { themes } from "./theme/theme";
+import { useThemeMode } from "./hooks/useThemeMode";
+import { GlobalStyle } from "./GlobalStyles";
+
 
 function App() {
   const [query, setQuery] = useState({ q: "berlin" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
+  const [theme, toggleTheme] = useThemeMode();
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -30,10 +36,11 @@ function App() {
   }, [query, units]);
 
   return (
-    <>
+    <ThemeProvider theme={themes[theme]}>
+      <GlobalStyle />
       <Wrapper>
         <WeatherBox>
-          <Navbar/>
+          <Navbar handleClick={toggleTheme} t/>
           <TopButtons setQuery={setQuery} />
           <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
           {weather && (
@@ -53,7 +60,9 @@ function App() {
         </WeatherBox>
       </Wrapper>
       <Footer />
-    </>
+    </ThemeProvider>
+
+
   );
 }
 

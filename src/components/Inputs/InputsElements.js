@@ -5,8 +5,8 @@ export const InputBox = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    background-color: var(--black-s);
-    border: 1px solid var(--black-m);
+    background-color: ${({ theme }) => theme.colors.backgroundBox};
+    border: ${({ theme }) => theme.colors.border};
     border-radius: 0.6rem;
     padding: 1rem;
 
@@ -28,15 +28,14 @@ export const Fieldset = styled.fieldset`
 
 export const Search = styled.input`
     padding: 1rem 2rem;
-    border: none;
     width: 90%;
-    background-color: var(--black-s);
-    color: var(--green);
+    background-color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.inputText};
     font-size: 1.8rem;
-    border-bottom: 2px solid var(--white);
+    border: ${({ theme }) => theme.colors.border};
 
     ::placeholder{
-        color: var(--green);
+        color: ${({ theme }) => theme.colors.inputText};
     }
 `
 
@@ -50,8 +49,8 @@ export const TemperatureBox = styled.div`
     display: flex;
     justify-content: center;
     gap: 2rem;
-    background-color: var(--black-l);
-    border: 1px solid var(--black-m);
+    background-color: ${({ theme }) => theme.colors.background};
+    border: ${({ theme }) => theme.colors.border};
     border-radius: 0.6rem;
     padding: 1rem;
     

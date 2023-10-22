@@ -4,12 +4,23 @@ export const GlobalStyle = createGlobalStyle`
 
 :root{
 
-/* COLORES */
+    /* COLORES */
+
+    /* MODO OSCURO */
+
   --black-s: #222222;
   --black-l: #191717;
   --black-m: #454545;
   --green: #03C988;
   --white: #fafafa;
+
+  /* MODO CLARO */
+
+  --white-s: #F6F4EB;
+  --white-l: #F5F5F5;
+  --white-m: #F5F4F4;
+  --white-x: #C8C6C6;
+  --white-r: #B4B4B3;
 }
 
 *{
@@ -30,7 +41,7 @@ html{
 
 body{
     font-size:1.8rem;
-    background-color: var(--black-l);
+    background-color: ${({ theme }) => theme.colors.background};
     color: #fafafa;
 }
 

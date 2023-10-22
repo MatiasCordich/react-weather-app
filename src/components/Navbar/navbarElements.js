@@ -12,19 +12,16 @@ export const SwitchBox = styled.div`
   border: 1px solid var(--black-m);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content:  ${({theme}) => theme.colors.flexDirection};
   border-radius: 98rem;
   padding: .1rem;
   cursor: pointer;
-
-  &[data-ison="true"] {
-    justify-content: flex-end;
-  }
 `;
 
-export const Switch = styled.div`
+export const Switch = styled.button`
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 100%;
   background-color: var(--green);
+  
 `;

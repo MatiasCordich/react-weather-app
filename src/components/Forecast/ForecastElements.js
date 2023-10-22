@@ -9,8 +9,8 @@ export const ForecastBox = styled.div`
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  background-color: var(--black-l);
-  border: 1px solid var(--black-m);
+  background-color: ${({ theme }) => theme.colors.backgroundBox};
+  border: ${({ theme }) => theme.colors.border};
   border-radius: 0.6rem;
   justify-content: stretch;
 `;
@@ -56,7 +56,8 @@ export const ForecastHour = styled.p`
 `;
 
 export const ForecastImg = styled(Img)`
-  background-color: var(--black-s);
+  background-color: ${({ theme }) => theme.colors.backgroundImg};
+  border: ${({ theme }) => theme.colors.border};
 `;
 
 export const ForecastTemperature = styled(ForecastHour)`

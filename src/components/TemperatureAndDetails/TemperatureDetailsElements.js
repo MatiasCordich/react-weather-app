@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const DetailsBox = styled.div`
   padding: 1rem;
   gap: 2rem;
-  background-color: var(--black-l);
-  border: 1px solid var(--black-m);
+  background-color: ${({ theme }) => theme.colors.backgroundBox};
+  border: ${({ theme }) => theme.colors.border};
   border-radius: 0.6rem;
   width: 100%;
   display: flex;
@@ -14,8 +14,8 @@ export const DetailsBox = styled.div`
 // BOX 1
 
 export const TemperatureBox = styled.div`
-  background-color: var(--black-s);
-  border: 1px solid var(--black-m);
+  background-color: ${({ theme }) => theme.colors.backgroundBox};
+  border: ${({ theme }) => theme.colors.border};
   border-radius: 0.6rem;
   padding: 1.5rem;
   display: flex;
@@ -37,8 +37,8 @@ export const TempBoxFirst = styled.div`
 export const Img = styled.img`
   width: 100%;
   max-width: 20rem;
-  background-color: var(--black-l);
-  border: 1px solid var(--black-m);
+  background-color: ${({ theme }) => theme.colors.backgroundImg};
+  border: ${({ theme }) => theme.colors.border};
   border-radius: 0.4rem;
 `;
 
@@ -46,8 +46,8 @@ export const TemperatureText = styled.p`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--black-l);
-  border: 1px solid var(--black-m);
+  background-color: ${({ theme }) => theme.colors.backgroundBox};
+  border: ${({ theme }) => theme.colors.border};
   border-radius: 0.4rem;
   width: 100%;
   font-size: 9rem;
@@ -69,10 +69,10 @@ export const OthersDetails = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--black-l);
-  border: 1px solid var(--black-m);
+  background-color: ${({ theme }) => theme.colors.backgroundBox};
+  border: ${({ theme }) => theme.colors.border};
   color: var(--green);
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 0.4rem;
   gap: 1.5rem;
 
@@ -98,9 +98,9 @@ export const UpAndDown = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: var(--black-s);
-  border: 1px solid var(--black-m);
-  border-radius: 0%.4rem;
+  background-color: ${({ theme }) => theme.colors.backgroundBox};
+  border: ${({ theme }) => theme.colors.border};
+  border-radius: 0.4rem;
   padding: 1rem;
   color: var(--green);
 
@@ -125,5 +125,5 @@ export const Data = styled.li`
 
 export const ForecastText = styled.div`
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 700;
 `;
