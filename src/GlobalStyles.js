@@ -43,6 +43,7 @@ body{
     font-size:1.8rem;
     background-color: ${({ theme }) => theme.colors.background};
     color: #fafafa;
+    transition: .4s all;
 }
 
 ul{

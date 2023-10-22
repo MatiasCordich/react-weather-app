@@ -4,12 +4,13 @@ export const SContent = styled.div`
   display: flex;
   align-items: center;
   gap: .9rem;
+  color: var(--green);
 `
 export const SwitchBox = styled.div`
   width: 5rem;
   height: 2.7rem;
-  background-color: var(--black-l);
-  border: 1px solid var(--black-m);
+  background-color: ${({ theme }) => theme.colors.backgroundBox};
+    border: ${({ theme }) => theme.colors.border};
   display: flex;
   align-items: center;
   justify-content:  ${({theme}) => theme.colors.flexDirection};

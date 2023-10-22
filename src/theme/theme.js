@@ -16,7 +16,7 @@ export const themes = {
       flexDirection: "flex-end",
       border: "1px solid var(--black-m)",
       inputText: "var(--green)",
-      backgroundImg: "var(--black-l)"
+      backgroundImg: "var(--black-l)",
     },
   },
 };

@@ -67,7 +67,7 @@ const Inputs = ({ setQuery, units, setUnits }) => {
           name="metric"
           onClick={handleUnitsChange}
         > °C</TemperatureButton>
-        <p>|</p>
+        <p style={{color:"var(--green)"}}>|</p>
         <TemperatureButton
           name="imperial"
           onClick={handleUnitsChange}
