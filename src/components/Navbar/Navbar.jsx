@@ -3,7 +3,6 @@ import { SContent, Switch, SwitchBox } from './navbarElements'
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useThemeMode } from '../../hooks/useThemeMode';
 import { useEffect } from 'react';
 
 const Navbar = ({ handleClick }) => {
@@ -14,24 +13,6 @@ const Navbar = ({ handleClick }) => {
     damping: 30
   };
 
-  const [isToggled, setToggled] = useState(false)
-
-
-  const savedTheme = window.localStorage.getItem("theme")
-
-  const onToggle = () => {
-    if (savedTheme !== "default") {
-      setToggled(!isToggled)
-    } else {
-      setToggled(isToggled)
-    }
-  }
-
-  useEffect(() => {
-    savedTheme === "default" 
-    ? setToggled(false)
-    : setToggled(true)
-  }, [])
   return (
     <>
       <SContent>
